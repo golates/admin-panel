@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+#root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* INPUTS */
+
+.float-label-input:focus-within label,
+.float-label-input input:not(:placeholder-shown) + label {
+    transform: translateY(-1.5rem) scale(0.75);
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* BUTTONS */
+@layer components {
+    .btn {
+        @apply w-full text-center border border-gray-300 rounded py-3
+    }
+
+    .btn-outline {
+        @apply btn bg-gray-800 text-white font-semibold hover:bg-gray-900 transition-colors duration-300
+    }
+
+    .btn-normal {
+        @apply btn hover:bg-gray-100 transition-colors duration-300
+    }
+}
