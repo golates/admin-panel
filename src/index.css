@@ -30,14 +30,14 @@ html, body {
 /* BUTTONS */
 @layer components {
     .btn {
-        @apply w-full text-center border border-gray-300 rounded py-3
+        @apply w-full text-center border border-gray-300 rounded py-3 disabled:opacity-70 disabled:cursor-not-allowed
     }
 
     .btn-outline {
-        @apply btn bg-gray-800 text-white font-semibold hover:bg-gray-900 transition-colors duration-300
+        @apply btn bg-gray-800 text-white font-semibold disabled:bg-gray-800 hover:bg-gray-900 transition-colors duration-300
     }
 
     .btn-normal {
-        @apply btn hover:bg-gray-100 transition-colors duration-300
+        @apply btn disabled:bg-white hover:bg-gray-100 transition-colors duration-300
     }
 }
